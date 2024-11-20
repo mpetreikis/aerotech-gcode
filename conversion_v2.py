@@ -3,7 +3,7 @@ import pandas as pd
 # reading off the text from the printing programme into an array
 full_text = pd.DataFrame(
     [line.strip().split(" ")
-     for line in open("PDMS_838um unedited.txt", encoding="utf8")]
+     for line in open("example_unedited.txt", encoding="utf8")]
 )
 
 ############################################################
@@ -118,9 +118,9 @@ if system == "metric" or "Metric" or "m":
     ]
     preamble = pd.DataFrame(preamble_list)
     if top_position == "d":
-        top_position = "17.5390"
+        top_position = "17.5000"
     if bottom_position == "d":
-        bottom_position = "16.5230"
+        bottom_position = "16.5000"
 
 elif system == "imperial" or "Imperial" or "i":
     preamble_list = [
@@ -132,9 +132,9 @@ elif system == "imperial" or "Imperial" or "i":
     ]
     preamble = pd.DataFrame(preamble_list)
     if top_position == "d":
-        top_position = "0.69051"
+        top_position = "0.68898"
     if bottom_position == "d":
-        bottom_position = "0.65051"
+        bottom_position = "0.64898"
 else:
     preamble_list = [
         ["G90", None, None],
@@ -145,9 +145,9 @@ else:
     ]
     preamble = pd.DataFrame(preamble_list)
     if top_position == "d":
-        top_position = "17.5390"
+        top_position = "17.5000"
     if bottom_position == "d":
-        bottom_position = "16.5230"
+        bottom_position = "16.5000"
 
 # Making the correct string for positions
 top_position = "Z" + top_position
