@@ -11,18 +11,21 @@ This 3D printer is mostly used for fabrication of flexible PCBs. Consequently, t
 Nevertheless, _FlatCam_ generated g-code that is to be used by milling machines, therefore, a number of instructions provided, such as M-codes, some G-codes, numerous F-codes, are either not necessary when performing printing using _Aerotech Motion Composer_ or cannot be interpreted by this piece of software. This project was completed for the simple reason of translating the _FlatCam_ generated g-code into _Aerotech Motion Composer_ readable g-code without needing to do a lot of manual editing.
 
 The different files in the repo serve the following purposes:
+
 - [conversion_v2.py](conversion_v2.py) is a Python script that was written to perform the translation and works by asking the user on whether the g-code supplied is in metric on imperial units, and later asking for inputs for the printing speed as well as high and low positions of the printing nozzle. If no input is provided, metric units are assumed and the default high and low positions are inserted. Only one printing speed F-code is inserted in the converted file (at the beginning), therefore, if different printing speeds throughout the printing pattern are required, the users are encouraged to contribute/modify the project.
 - [example_unedited.txt](example_unedited.txt) and [converted.txt](converted.txt) are the example pre- and post-conversion g-code text files, respectively.
 - [multilayer_printing.py](multilayer_printing.py) is a Python script to multiply the g-code of the designed printing pattern for multilayer printing. This is useful if you want to perform printing of the same pattern multiple times without running the printing programme on _Aerotech Motion Composer_ every single time. This also enabled 3D (more like 2.5D) printing of some shapes, such as moulds as the g-code of the pattern can be multiplied with a Z-axis offset.
-- 
+- [3d_printing.txt](3d_printing.txt) is a 50-layer, 0.012 mm Z-offset printing programme of the [converted.txt](converted.txt) printing pattern.
+
+__N.B.__ This workflow might be obsolete for most readers as similar results can be achieved by mastering the slicing software included in _Autodesk Fusion 360_.
 
 
-## **Installation**
+## **Installation and Usage**
 
-To install Project Title, follow these steps:
+To install and use Flatcam-to-Aerotech G-code Conversion, follow these steps:
 
-1. Clone the repository: **`git clone https://github.com/username/project-title.git`**
-2. Navigate to the project directory: **`cd project-title`**
+1. Clone the repository: **`git clone https://github.com/mpetreikis/aerotech-gcode.git`**
+2. Navigate to the project directory: **`cd aerotech-gcode`**
 3. Install dependencies: **`npm install`**
 4. Build the project: **`npm run build`**
 5. Start the project: **`npm start`**
