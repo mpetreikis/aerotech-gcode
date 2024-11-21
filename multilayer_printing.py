@@ -50,19 +50,6 @@ z_coordinates = pd.DataFrame(pd.to_numeric(z_coordinates.squeeze()))
 # need to know which elements in the array need to be replaced in the upcoming for loop
 z_coordinates_rows = z_coordinates.index.values.tolist()
 
-# just some code I am writing for the sake of testing out how concatenation works and finding out what is wrong with the
-# the code I have written so far
-
-# let's do the first shift in the z-coordinates
-# new_block_z_1=pd.DataFrame(z_coordinates.squeeze()-z_increment)
-# new_block_z_1=pd.DataFrame('Z' + new_block_z_1.squeeze().astype(str))
-# single_layer.loc[z_coordinates_rows,1]=new_block_z_1.squeeze()
-# print(single_layer)
-
-# let's concatenate this first bit with the bit after the first shift
-# main_text=pd.concat([main_text,single_layer],ignore_index=True,axis=0)
-# print(main_text)
-
 # creating a loop to update the z-coordinates for every layer and add the block for every layer to the total printing programme
 for i in range(1, no_layers):
     new_block_z = pd.DataFrame(
