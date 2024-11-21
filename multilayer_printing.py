@@ -3,7 +3,7 @@ import pandas as pd
 
 # reading off the text from the printing programme into an array
 full_text = pd.DataFrame([line.strip().split(" ")
-                         for line in open("Mould edited v2.txt")])
+                         for line in open("converted.txt")])
 # parsing through the text to find the indices of rows and the corresponding z-coordinates
 z_coordinates = full_text.stack()[
     full_text.stack().str.contains("z", case=False)
@@ -82,5 +82,5 @@ for i in range(1, no_layers):
 printing_programme = pd.concat(
     [preamble, main_text, ending], ignore_index=True, axis=0)
 print(printing_programme)
-printing_programme.to_csv("printing.txt", header=None,
+printing_programme.to_csv("3d_printing.txt", header=None,
                           index=None, sep=" ", mode="a")
