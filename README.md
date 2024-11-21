@@ -26,36 +26,21 @@ To install and use Flatcam-to-Aerotech G-code Conversion, follow these steps:
 
 1. Clone the repository: **`git clone https://github.com/mpetreikis/aerotech-gcode.git`**
 2. Navigate to the project directory: **`cd aerotech-gcode`**
-3. Install dependencies: **`npm install`**
-4. Build the project: **`npm run build`**
-5. Start the project: **`npm start`**
-
-## **Usage**
-
-To use Project Title, follow these steps:
-
-1. Open the project in your favorite code editor.
-2. Modify the source code to fit your needs.
-3. Build the project: **`npm run build`**
-4. Start the project: **`npm start`**
-5. Use the project as desired.
+3. (Optional) Create a new python environment using conda: **`conda env create -f environment.yml`**
+4. (Optional) Activate the environment: **`conda activate aerotech`**
+5. (Optional) Install the required packages in the environment: **`pip install -r requirements.txt`**
+6. Open the project in your favorite code editor
+7. Modify [conversion_v2.py](conversion_v2.py) and [multilayer_printing.py](multilayer_printing.py) to fit your needs
+8. Use the project as desired
 
 ## **Contributing**
 
-If you'd like to contribute to Project Title, here are some guidelines:
-
-1. Fork the repository.
-2. Create a new branch for your changes.
-3. Make your changes.
-4. Write tests to cover your changes.
-5. Run the tests to ensure they pass.
-6. Commit your changes.
-7. Push your changes to your forked repository.
-8. Submit a pull request.
+If you'd like to contribute to Flatcam-to-Aerotech G-code Conversion, feel free to email me (mpetreikis@tutanota.com) or simply, fork the repo, create a new branch for your changes and eventually submit a pull request.
 
 ## **License**
 
-Project Title is released under the MIT License. See the **[LICENSE](https://www.blackbox.ai/share/LICENSE)** file for details.
+Flatcam-to-Aerotech G-code Conversion is released under the MIT License. See the **[LICENSE](https://www.blackbox.ai/share/LICENSE)** file for details.
 
 ## **Authors and Acknowledgment**
 
+Flatcam-to-Aerotech G-code Conversion was created by **[Matas Petreikis](https://github.com/mpetreikis)**.
