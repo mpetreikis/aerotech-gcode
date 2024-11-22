@@ -39,7 +39,7 @@ If you'd like to contribute to Flatcam-to-Aerotech G-code Conversion, feel free 
 
 ## **License**
 
-Flatcam-to-Aerotech G-code Conversion is released under the MIT License. See the **[LICENSE](https://www.blackbox.ai/share/LICENSE)** file for details.
+Flatcam-to-Aerotech G-code Conversion is released under the MIT License. See the **[LICENSE](LICENSE)** file for details.
 
 ## **Authors and Acknowledgment**
 
